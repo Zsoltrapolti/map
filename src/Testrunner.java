@@ -10,7 +10,12 @@ public class Testrunner {
         ubung3Test.subtract();
         ubung3Test.multiply();
         ubung3Test.divide();
-
+        Ubung4_test ubung4Test = new Ubung4_test();
+        Ubung4_test.findCheapestKeyboard();
+        Ubung4_test.findMostExpensiveItem();
+        Ubung4_test.findMaxUsbWithinBudget();
+        Ubung4_test.findMaxPriceWithinBuget();
+        System.out.println("pass all tests");
     }
 
 }

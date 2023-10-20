@@ -18,6 +18,15 @@ public class Main {
         System.out.println(Arrays.toString(ubung3.multiply(num1, 2)));
         System.out.println(Arrays.toString(ubung3.divide(num1, 2)));
 
+        Ubung4 ubung4 = new Ubung4();
+        int[] keyboardPrices = {40, 50, 60};
+        int[] usbPrices = {8, 12};
+        int budget = 60;
+        System.out.println(ubung4.findCheapestKeyboard(keyboardPrices));
+        System.out.println(ubung4.findMostExpensiveItem(keyboardPrices, usbPrices));
+        System.out.println(ubung4.findMaxUsbWithinBudget(usbPrices, budget));
+        System.out.println(ubung4.findMaxPriceWithinBudget(keyboardPrices, usbPrices, budget));
+
 
 
     }
