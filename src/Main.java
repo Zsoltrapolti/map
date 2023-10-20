@@ -11,10 +11,10 @@ public class Main {
         Ubung2 ubung2 = new Ubung2();
         int [] array = new int[]{2, 3, 6, 1, 2};
 
-        System.out.println(ubung2.max(array, 5));
-        System.out.println(ubung2.min(array, 5));
-        System.out.println(ubung2.max_Sum(array, 5));
-        System.out.println(ubung2.min_Sum(array, 5));
+        System.out.println(ubung2.max(array));
+        System.out.println(ubung2.min(array));
+        System.out.println(ubung2.max_Sum(array));
+        System.out.println(ubung2.min_Sum(array));
 
         Ubung3 ubung3 = new Ubung3();
         int [] num1 = new int[]{1, 3, 0, 0, 0, 0, 0, 0, 0};
