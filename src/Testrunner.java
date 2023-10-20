@@ -1,5 +1,9 @@
 public class Testrunner {
     public static void main(String[] args) {
+        Ubung1_test ubung1Test = new Ubung1_test();
+        ubung1Test.getAverageGrade();
+        ubung1Test.getRoundedGrades();
+        ubung1Test.getMaxRoundedGrade();
         Ubung2_Test ubung2Test = new Ubung2_Test();
         ubung2Test.max();
         ubung2Test.min();
