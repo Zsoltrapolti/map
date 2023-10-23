@@ -1,40 +1,52 @@
+
 public class ubung_1 {
-    public static double getAverageGrade(double[] grades) {
-        if (grades.length == 0) {
-            return 0.0;
-        }
 
-        double sum = 0;
-        for (double grade : grades) {
-            sum += grade;
+    public static double averageGrade(double[] grades) {
+        if(grades.length == 0){
+            throw new IllegalArgumentException("empty array");
         }
-
-        return sum / grades.length;
+        double greats = 0;
+        for(int i = 0; i < grades.length; i++){
+            if(grades[i] >= 40) {
+                greats += grades[i];
+            }
+        }
+        return (double) greats / grades.length;
+    }
+    public static int round(double note) {
+        if (note < 38) {
+            return (int) note;
+        } else {
+            if (note % 5 > 2) {
+                return (int) ((int) note + 5 - note % 5);
+            } else {
+                return (int) note;
+            }
+        }
     }
 
     public static double[] getRoundedGrades(double[] grades) {
-        double[] rounded = new double[grades.length];
+        if(grades.length == 0){
+            throw new IllegalArgumentException("empty array");
+        }
+        double[] result = new double[grades.length];
         for (int i = 0; i < grades.length; i++) {
-            rounded[i] = Math.round(grades[i]);
+            result[i] = round(grades[i]);
         }
-        return rounded;
+        return result;
     }
-
     public static double getMaxRoundedGrade(double[] grades) {
-        if (grades.length == 0) {
-            return 0.0;
+        if(grades.length == 0){
+            throw new IllegalArgumentException("empty array");
         }
-
-        double maxRounded = Math.round(grades[0]);
-        for (double grade : grades) {
-            double rounded = Math.round(grade);
-            if (rounded > maxRounded) {
-                maxRounded = rounded;
+        double[] roundedGrades = getRoundedGrades(grades);
+        double max = roundedGrades[0];
+        for (int i = 1; i < roundedGrades.length; i++) {
+            if (roundedGrades[i] > max) {
+                max = roundedGrades[i];
             }
         }
-
-        return maxRounded;
+        return max;
     }
+
 }
-
-
