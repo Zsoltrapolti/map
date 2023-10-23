@@ -1,9 +1,9 @@
 import java.util.Arrays;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalAccessException {
         ubung_1 ubung1 = new ubung_1();
         double[] grades = new double[]{2.3, 3.5, 5.0, 1.3, 9.9};
-        System.out.println(ubung1.getAverageGrade(grades));
+        System.out.println(ubung1.averageGrade(grades));
         System.out.println(Arrays.toString(ubung1.getRoundedGrades(grades)));
         System.out.println(ubung1.getMaxRoundedGrade(grades));
 

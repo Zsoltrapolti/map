@@ -1,5 +1,12 @@
 public class Ubung3 {
-    public static int[] add(int[] num1, int[] num2) {
+    public static int[] add(int[] num1, int[] num2) throws IllegalAccessException {
+        if(num1.length == 0) {
+            throw new IllegalAccessException("empty array");
+
+        }
+        if(num2.length == 0) {
+            throw new IllegalAccessException("empty array");
+        }
         int carry = 0;
         int n = num1.length;
         int[] result = new int[n];
@@ -20,7 +27,14 @@ public class Ubung3 {
         return result;
     }
 
-    public static int[] subtract(int[] num1, int[] num2) {
+    public static int[] subtract(int[] num1, int[] num2) throws IllegalAccessException {
+        if(num1.length == 0) {
+            throw new IllegalAccessException("empty array");
+
+        }
+        if(num2.length == 0) {
+            throw new IllegalAccessException("empty array");
+        }
         int borrow = 0;
         int n = num1.length;
         int[] result = new int[n];
@@ -39,7 +53,11 @@ public class Ubung3 {
         return result;
     }
 
-    public static int[] multiply(int[] num1, int digit) {
+    public static int[] multiply(int[] num1, int digit) throws IllegalAccessException {
+        if(num1.length == 0) {
+            throw new IllegalAccessException("empty array");
+
+        }
         int n = num1.length;
         int carry = 0;
         int[] result = new int[n];
@@ -60,7 +78,11 @@ public class Ubung3 {
         return result;
     }
 
-    public static int[] divide(int[] num1, int digit) {
+    public static int[] divide(int[] num1, int digit) throws IllegalAccessException {
+        if(num1.length == 0) {
+            throw new IllegalAccessException("empty array");
+
+        }
         int n = num1.length;
         int remainder = 0;
         int[] result = new int[n];

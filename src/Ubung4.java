@@ -1,7 +1,8 @@
 public class Ubung4 {
-    public static int findCheapestKeyboard(int[] keyboardPrices) {
+    public static int findCheapestKeyboard(int[] keyboardPrices) throws IllegalAccessException {
 
-
+        if(keyboardPrices.length == 0){
+            throw new IllegalAccessException("empty array");        }
         int cheapestKeyboard = keyboardPrices[0];
 
         for (int i = 1; i < keyboardPrices.length; i++) {
@@ -12,7 +13,13 @@ public class Ubung4 {
 
         return cheapestKeyboard;
     }
-    public static int findMostExpensiveItem(int[] keyboardPrices, int[] usbPrices) {
+    public static int findMostExpensiveItem(int[] keyboardPrices, int[] usbPrices) throws IllegalAccessException {
+        if(keyboardPrices.length == 0) {
+            throw new IllegalAccessException("empty array");
+        }
+        if(usbPrices.length == 0) {
+            throw new IllegalAccessException("empty array");
+        }
         int maxPrice = 0;
 
 
@@ -33,7 +40,10 @@ public class Ubung4 {
 
         return maxPrice;
     }
-    public static int findMaxUsbWithinBudget(int[] usbPrices, int budget) {
+    public static int findMaxUsbWithinBudget(int[] usbPrices, int budget) throws IllegalAccessException {
+        if(usbPrices.length == 0) {
+            throw new IllegalAccessException("empty array");
+        }
         int maxUsbPrice = 0;
 
         for (int price : usbPrices) {
@@ -44,7 +54,14 @@ public class Ubung4 {
 
         return maxUsbPrice;
     }
-    public static int findMaxPriceWithinBudget(int[] keyboardPrices, int[] usbPrices, int budget) {
+    public static int findMaxPriceWithinBudget(int[] keyboardPrices, int[] usbPrices, int budget) throws IllegalAccessException {
+        if(keyboardPrices.length == 0) {
+            throw new IllegalAccessException("empty array");
+
+        }
+        if(usbPrices.length == 0) {
+            throw new IllegalAccessException("empty array");
+        }
         int maxPrice = 0;
 
         for (int keyboardPrice : keyboardPrices) {
