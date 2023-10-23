@@ -1,15 +1,13 @@
 
 public class ubung_1 {
 
-    public static double averageGrade(double[] grades) {
+    public static double averageGrade(double[] grades) throws IllegalAccessException {
         if(grades.length == 0){
-            throw new IllegalArgumentException("empty array");
+            throw new IllegalAccessException("empty array");
         }
         double greats = 0;
         for(int i = 0; i < grades.length; i++){
-            if(grades[i] >= 40) {
-                greats += grades[i];
-            }
+            greats += grades[i];
         }
         return (double) greats / grades.length;
     }
@@ -25,9 +23,9 @@ public class ubung_1 {
         }
     }
 
-    public static double[] getRoundedGrades(double[] grades) {
+    public static double[] getRoundedGrades(double[] grades) throws IllegalAccessException {
         if(grades.length == 0){
-            throw new IllegalArgumentException("empty array");
+            throw new IllegalAccessException("empty array");
         }
         double[] result = new double[grades.length];
         for (int i = 0; i < grades.length; i++) {
@@ -35,7 +33,7 @@ public class ubung_1 {
         }
         return result;
     }
-    public static double getMaxRoundedGrade(double[] grades) {
+    public static double getMaxRoundedGrade(double[] grades) throws IllegalAccessException {
         if(grades.length == 0){
             throw new IllegalArgumentException("empty array");
         }

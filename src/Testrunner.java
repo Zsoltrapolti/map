@@ -1,9 +1,8 @@
 public class Testrunner {
     public static void main(String[] args) throws IllegalAccessException {
         Ubung1_test ubung1Test = new Ubung1_test();
-//        ubung1Test.averageGrade();
-        //ubung1Test.getRoundedGrades();
-        //ubung1Test.getMaxRoundedGrade();
+        ubung1Test.averageGrade();
+        ubung1Test.getRoundedGrades();
         Ubung2_Test ubung2Test = new Ubung2_Test();
         ubung2Test.max();
         ubung2Test.min();
