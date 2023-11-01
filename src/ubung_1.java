@@ -35,7 +35,7 @@ public class ubung_1 {
     }
     public static double getMaxRoundedGrade(double[] grades) throws IllegalAccessException {
         if(grades.length == 0){
-            throw new IllegalArgumentException("empty array");
+            throw new IllegalAccessException("empty array");
         }
         double[] roundedGrades = getRoundedGrades(grades);
         double max = roundedGrades[0];

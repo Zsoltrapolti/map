@@ -15,6 +15,7 @@ class Ubung1_test {
         }
     }
 
+
     public static void getRoundedGrades() throws IllegalAccessException {
         double[] grades = new double[]{2.3, 3.5, 5.0, 1.3, 9.9};
         double[] result = new double[]{2.0, 3.0, 5.0, 1.0, 9.0};
@@ -27,8 +28,17 @@ class Ubung1_test {
         }
 
     }
-
-
+    public static void getMaxRoundedGrade() throws IllegalAccessException {
+        double[] grades = new double[]{2.3, 3.5, 5.0, 1.3, 9.9};
+        assert ubung_1.getMaxRoundedGrade(grades) == 9.0;
+        double[] grades_1 = new double[]{};
+        try {
+            ubung_1.getMaxRoundedGrade(grades_1);
+            assert false;
+        } catch (IllegalAccessException e) {
+            assert true;
+        }
+    }
 
 
 }
